@@ -19,12 +19,12 @@ var anti_gravity_duration = _random(6, 8)
 
 # Forward Wind
 var forward_wind = false
-var initial_forward_wind = _random(15, 17)
-var forward_wind_duration = _random(6, 8)
+var initial_forward_wind = _random(20, 17)
+var forward_wind_duration = _random(6, 10)
 
 # Backward Wind
 var backward_wind = false
-var initial_backward_wind = _random(25, 27)
+var initial_backward_wind = _random(32, 34)
 var backward_wind_duration = _random(6, 8)
 
 func _ready():
@@ -74,7 +74,7 @@ func check_gravity():
 			Global.GameState.hide_anti_gravity_alert() 
 			
 		elif score == initial_anti_gravity + anti_gravity_duration:
-			initial_anti_gravity = _random(score + 3, score + 7)
+			initial_anti_gravity = _random(score + 10, score + 15)
 			anti_gravity_duration = _random(6, 10)
 			
 		else:
@@ -90,21 +90,44 @@ func check_forward_wind():
 		Global.GameState.show_forward_wind()
 	else:
 		if score < initial_forward_wind:
-			motion.x = SPEED
+			if backward_wind == false:
+				motion.x = SPEED
 			forward_wind = false
 			Global.GameState.hide_forward_wind()
 			
 		elif score == initial_forward_wind + forward_wind_duration:
-			initial_forward_wind = _random(score + 5, score + 8)
+			initial_forward_wind = _random(score + 15, score + 18)
 			forward_wind_duration = _random(6, 10)
 		
 		else:
-			motion.x = SPEED
+			if backward_wind == false:
+				motion.x = SPEED
 			forward_wind = false
 			Global.GameState.hide_forward_wind()
 
 func check_backward_wind():
-	pass
+	var score = Global.GameState.coins
+	if score >= initial_backward_wind and score < initial_backward_wind + backward_wind_duration and forward_wind == false:
+		motion.x = 500
+		backward_wind = true
+		Global.GameState.show_backward_wind()
+		
+	else:
+		if score < initial_backward_wind:
+			if forward_wind == false:
+				motion.x = SPEED
+			backward_wind = false
+			Global.GameState.hide_backward_wind()
+			
+		elif score == initial_backward_wind + backward_wind_duration:
+			initial_backward_wind = _random(score + 10, score + 13)
+			backward_wind_duration = _random(6, 8)
+			
+		else:
+			if forward_wind == false:
+				motion.x = SPEED
+			backward_wind = false
+			Global.GameState.hide_backward_wind()
 
 func check_game_over():
 	if position.y > 2500 or position.y < -2500:

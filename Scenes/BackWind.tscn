@@ -35,6 +35,6 @@ margin_bottom = 540.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TextureRect"]
 frames = SubResource( 1 )
-frame = 4
+frame = 10
 playing = true
 centered = false

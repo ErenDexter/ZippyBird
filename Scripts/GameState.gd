@@ -10,15 +10,16 @@ func _ready():
 		
 func coin_up():
 	coins += 1
-	print(Global.Bird.initial_anti_gravity)
-	print(Global.Bird.anti_gravity_duration)
+	Global.Coin_SFX.play()
 	print("Coins: " + str(coins))
 	update_GUI(coins)	
 
 func show_anti_gravity_alert():
+	Global.Alert_SFX.playing = true
 	$Bird/Camera2D/AntiGravityAlert/TextureRect.visible = true
 	
 func hide_anti_gravity_alert():
+	Global.Alert_SFX.playing = false
 	$Bird/Camera2D/AntiGravityAlert/TextureRect.visible = false
 
 func show_forward_wind():	

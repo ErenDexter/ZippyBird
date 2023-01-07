@@ -36,6 +36,6 @@ margin_bottom = 540.0
 position = Vector2( 200, 105 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 1 )
-frame = 4
+frame = 5
 playing = true
 centered = false
