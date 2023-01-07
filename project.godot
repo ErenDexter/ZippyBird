@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Zippy Bird"
-run/main_scene="res://Scenes/Bird.tscn"
+run/main_scene="res://Scenes/Level1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -32,6 +32,7 @@ common/drop_mouse_on_gui_input_disabled=true
 
 2d_physics/layer_1="Bird"
 2d_physics/layer_2="Pipe"
+2d_physics/layer_3="Coin"
 
 [physics]
 
@@ -39,5 +40,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
 2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"

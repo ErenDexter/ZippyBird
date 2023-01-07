@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerHanging.png-1eabc8458446846ac3ecce3d92c1cbbe.stex"
+path="res://.import/Anti_Gravity_Alert2.png-8e971cca71554f43d86b1ec98adf9625.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/HUD/bannerHanging.png"
-dest_files=[ "res://.import/bannerHanging.png-1eabc8458446846ac3ecce3d92c1cbbe.stex" ]
+source_file="res://sprites/Anti_Gravity_Alert2.png"
+dest_files=[ "res://.import/Anti_Gravity_Alert2.png-8e971cca71554f43d86b1ec98adf9625.stex" ]
 
 [params]
 

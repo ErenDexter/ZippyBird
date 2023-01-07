@@ -11,8 +11,9 @@ extents = Vector2( 11.3492, 79.4445 )
 [node name="Pipes" type="Node2D"]
 
 [node name="pipe_green_top" type="Sprite" parent="."]
-position = Vector2( 402, 450 )
-scale = Vector2( 2.42308, 3.6625 )
+visible = false
+position = Vector2( 287, 510 )
+scale = Vector2( 10.1346, 15.3185 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -24,10 +25,10 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pipe_green_top/StaticBody2D"]
 visible = false
 position = Vector2( 0, -0.079361 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="pipe_red_top" type="Sprite" parent="."]
+visible = false
 position = Vector2( 780, 448 )
 scale = Vector2( 2.42308, 3.7125 )
 texture = ExtResource( 4 )
@@ -41,10 +42,10 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pipe_red_top/StaticBody2D"]
 visible = false
 position = Vector2( 0, -0.079361 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="pipe_green_bottom" type="Sprite" parent="."]
+visible = false
 position = Vector2( 550, 447 )
 scale = Vector2( 2.42308, 3.6875 )
 texture = ExtResource( 2 )
@@ -58,10 +59,10 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pipe_green_bottom/StaticBody2D"]
 visible = false
 position = Vector2( 0, -0.079361 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="pipe_red_bottom" type="Sprite" parent="."]
+visible = false
 position = Vector2( 920, 446 )
 scale = Vector2( 2.42308, 3.65 )
 texture = ExtResource( 3 )
@@ -75,5 +76,4 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pipe_red_bottom/StaticBody2D"]
 visible = false
 position = Vector2( 0, -0.079361 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )

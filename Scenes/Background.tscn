@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=1]
+[ext_resource path="res://GFX/Background/bg_layer2.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Background/bg_layer3.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Background/bg_layer4.png" type="Texture" id=4]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Background" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 2048, 2048 )
+
+[node name="Sprite" type="Sprite" parent="Background"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Background2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_offset = Vector2( 0, -550 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background2"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Background3" type="ParallaxLayer" parent="."]
+motion_offset = Vector2( 0, -300 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background3"]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Background4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 1.5, 1 )
+motion_offset = Vector2( 0, -500 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="Background4"]
+texture = ExtResource( 4 )
+centered = false
